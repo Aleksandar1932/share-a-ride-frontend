@@ -1,5 +1,7 @@
 const withPlugins = require("next-compose-plugins");
 
-const config = {};
+const config = { env: {
+    BACKEND_URL: 'http://',
+  },};
 
 module.exports = withPlugins([], config);
