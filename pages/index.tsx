@@ -38,7 +38,8 @@ const Login: React.FC = () => {
       body: JSON.stringify({ username: username, password: password }), // body data type must match "Content-Type" header
     });
     let token = await response.json();
-    localStorage.setItem("Authorization", token);
+    localStorage.setItem("jwt", JSON.stringify(token));
+    localStorage.setItem("username", username);
     if (token) {
       router.push("/home");
     }
