@@ -10,6 +10,8 @@ import {
   Center,
   FormHelperText,
   Button,
+  Divider,
+  Heading,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
@@ -46,10 +48,18 @@ const Login: React.FC = () => {
   };
   return (
     <SimpleGrid columns={2} spacing={0}>
-      <Box bg="blue" height="100vh"></Box>
+      <Box
+        bg="blue"
+        backgroundImage="url('/images/login-main.png')"
+        height="100vh"
+      ></Box>
 
-      <Center>
-        <Box bg="" height="100vh">
+      <Center h="100vh">
+        <Box bg="" w="70vh">
+          <Heading>Share A Ride</Heading>
+          <Heading size="md">Login</Heading>
+          <Divider h={"2em"} visibility="hidden"></Divider>
+
           <FormControl id="username">
             <FormLabel>Username</FormLabel>
             <Input
@@ -72,7 +82,9 @@ const Login: React.FC = () => {
             <FormHelperText>We'll never share your password.</FormHelperText>
           </FormControl>
 
+          <Divider h={"2em"}></Divider>
           <Button
+            w={"100%"}
             colorScheme="teal"
             variant="outline"
             onClick={() => {
