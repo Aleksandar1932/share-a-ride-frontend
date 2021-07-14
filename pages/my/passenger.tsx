@@ -87,7 +87,7 @@ const Passenger: React.FC = () => {
                       <Text>Price: {trip["price"]}</Text>
                       <Text>Offered Seats: {trip["offeredSeats"]}</Text>
                       <Text>Driver: {trip["driver"]["username"]}</Text>
-                      <Link>Meeting Place</Link>
+                      <Link href={"#"}>Meeting Place</Link>
                     </Box>
                     <Spacer></Spacer>
                     <Box alignItems="right">
